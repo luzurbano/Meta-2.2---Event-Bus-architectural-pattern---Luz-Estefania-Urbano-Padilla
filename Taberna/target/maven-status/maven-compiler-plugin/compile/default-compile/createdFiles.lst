@@ -1,7 +1,7 @@
 Componentes\PanelLED.class
 Componentes\SistemaDePedidos.class
 Componentes\SistemaDeSonido.class
-com\mycompany\taberna\EventBus.class
+EventBus\EventBus.class
 Componentes\Banda.class
 Componentes\Barra.class
 Events\BandaTocandoEvent.class
@@ -11,3 +11,4 @@ Events\ComidaPreparadaEvent.class
 Componentes\Cocina.class
 Componentes\SistemaDeHumo.class
 Events\BebidaServidaEvent.class
+EventBus\Broker.class
