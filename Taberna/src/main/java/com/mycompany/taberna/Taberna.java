@@ -1,6 +1,7 @@
 
 package com.mycompany.taberna;
 
+import EventBus.EventBus;
 import Componentes.*;
 import java.util.List;
 

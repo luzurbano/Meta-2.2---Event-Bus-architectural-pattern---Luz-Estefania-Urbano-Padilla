@@ -1,7 +1,7 @@
 
 package Componentes;
 
-import com.mycompany.taberna.EventBus;
+import EventBus.EventBus;
 import Events.PedidoRealizadoEvent;
 import java.util.List;
 import java.util.Random;

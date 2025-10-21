@@ -2,10 +2,11 @@
 package Componentes;
 
 import Events.PedidoRealizadoEvent;
-import com.mycompany.taberna.EventBus;
+import EventBus.EventBus;
 import Events.*;
 
 public class Barra {
+
     private final EventBus bus;
 
     public Barra(EventBus bus) {
@@ -14,15 +15,17 @@ public class Barra {
     }
 
     private void procesarPedido(PedidoRealizadoEvent e) {
-        e.items().stream()
+        e.getItems().stream()
                 .filter(item -> item.toLowerCase().contains("cerveza") || item.toLowerCase().contains("vino"))
                 .forEach(bebida -> {
                     new Thread(() -> {
-                        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
-                        System.out.println("[Barra] Bebida servida: " + bebida + " para mesa " + e.mesaId());
-                        bus.publicar(new BebidaServidaEvent(e.mesaId(), bebida));
+                        try {
+                            Thread.sleep(2000);
+                        } catch (InterruptedException ignored) {
+                        }
+                        System.out.println("[Barra] Bebida servida: " + bebida + " para mesa " + e.getMesaId());
+                        bus.publicar(new BebidaServidaEvent(e.getMesaId(), bebida));
                     }).start();
                 });
     }
 }
-

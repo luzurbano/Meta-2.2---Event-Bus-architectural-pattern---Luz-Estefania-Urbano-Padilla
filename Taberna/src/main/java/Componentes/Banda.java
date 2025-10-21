@@ -1,7 +1,7 @@
 
 package Componentes;
 
-import com.mycompany.taberna.EventBus;
+import EventBus.EventBus;
 import Events.BandaTocandoEvent;
 
 public class Banda {
